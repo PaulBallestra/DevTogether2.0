@@ -4,12 +4,12 @@
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
 
-        <ion-tab-button tab="login" href="/tabs/login">
+        <ion-tab-button tab="loginPage" href="/tabs/loginPage">
           <ion-icon name="log-in-outline"></ion-icon>
           <ion-label>Login</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab2" href="/tabs/dashboard">
+        <ion-tab-button tab="dashboard" href="/tabs/dashboard">
           <ion-label>Dashboard</ion-label>
         </ion-tab-button>
 
