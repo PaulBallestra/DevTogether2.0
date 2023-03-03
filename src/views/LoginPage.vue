@@ -18,6 +18,8 @@
         <ion-input id="inputPassword" type="text" placeholder="Password" style="color: white; border-bottom: 1px solid gray;"></ion-input>
         <ion-button @click="login">LOGIN</ion-button>
 
+        <ion-label id="labelResponse" style="text-align: center;"></ion-label>
+
       </div>
 
     </ion-content>
@@ -26,7 +28,7 @@
 
 <script>
 
-  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton } from '@ionic/vue';
+  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonLabel } from '@ionic/vue';
   import axios from "axios";
 
   let axiosResponse = null
@@ -39,7 +41,7 @@
   export default{
     name: 'LoginPage',
     components: {
-      IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton
+      IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonLabel
     },
     methods: {
       
@@ -49,13 +51,13 @@
 
         const inputUsername = document.getElementById('inputUsername').value
         const inputPassword = document.getElementById('inputPassword').value
+        const labelResponse = document.getElementById('labelResponse')
 
         if(axiosResponse.data.results[0].login.username === inputUsername && axiosResponse.data.results[0].login.password === inputPassword){
-          console.log('Connected')
+          labelResponse.innerHTML = 'CONNECTED'
         }else{
-          console.log('Erreur')
+          labelResponse.innerHTML = 'ERROR'
         }
-
       }
     }
   }

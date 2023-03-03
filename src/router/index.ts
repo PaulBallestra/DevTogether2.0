@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'dashboard',
-        component: () => import('@/views/Dashboard.vue')
+        component: () => import('@/views/DashboardPage.vue')
       },
     ]
   }

@@ -4,7 +4,7 @@
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
 
-        <ion-tab-button tab="loginPage" href="/tabs/loginPage">
+        <ion-tab-button tab="loginPage" href="/tabs/login">
           <ion-icon name="log-in-outline"></ion-icon>
           <ion-label>Login</ion-label>
         </ion-tab-button>
