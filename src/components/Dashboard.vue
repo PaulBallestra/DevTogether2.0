@@ -14,13 +14,13 @@
         </div>
         <div id="container_compteur">
 
-            <ion-button @click="decrement">
+            <ion-button fill="outline" shape="round" @click="decrement">
                 <ion-img style="width: 25px;" src="assets/icon/minus.svg"></ion-img>
             </ion-button>
 
             <ion-label id="labelValue" style="margin: auto;">0</ion-label>
 
-            <ion-button @click="increment">
+            <ion-button fill="outline" shape="round" @click="increment">
                 <ion-img style="width: 25px;" src="assets/icon/add.svg"></ion-img>
             </ion-button>
 
@@ -49,13 +49,11 @@
                 const labelValue = document.getElementById('labelValue')
                 const arrow = document.getElementById('arrow')
 
-                if(value !== 200)
-                    value++
-                else
-                    value = 200
+                value !== 200 ? value++ : value = 200
 
                 labelValue.innerHTML = value
 
+                //Calcul de la rotation, 1.18 pour plus ou moin se caler sur le compteur téléchargé
                 arrow.style.transform = 'rotate('+value*1.18+'deg)'
 
             },
@@ -66,10 +64,7 @@
                 const labelValue = document.getElementById('labelValue')
                 const arrow = document.getElementById('arrow')
 
-                if(value !== 0)
-                    value--
-                else
-                    value = 0
+                value !== 0 ? value-- : value = 0
 
                 labelValue.innerHTML = value
                 arrow.style.transform = 'rotate('+value*1.18+'deg)'
