@@ -5,11 +5,12 @@
       <ion-tab-bar slot="bottom">
 
         <ion-tab-button tab="loginPage" href="/tabs/login">
-          <ion-icon name="log-in-outline"></ion-icon>
+          <ion-img style="width: 25px; margin-bottom: 5px;;" src="assets/icon/login.svg"></ion-img>
           <ion-label>Login</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="dashboard" href="/tabs/dashboard">
+          <ion-img style="width: 25px; margin-bottom: 5px;" src="assets/icon/dashboard.svg"></ion-img>
           <ion-label>Dashboard</ion-label>
         </ion-tab-button>
 
@@ -19,6 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
+import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonPage, IonRouterOutlet, IonImg } from '@ionic/vue';
 import {  } from 'ionicons/icons';
 </script>
